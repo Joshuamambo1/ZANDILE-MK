@@ -1,0 +1,25 @@
+
+{
+"bot-name": "ZANDILE-MK",
+  "description": "ᴊᴀᴠᴀsᴄʀɪᴘᴛ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴊᴏsʜᴜᴀᴍᴀᴍʙᴏ𝟭 ᴛᴇᴄʜ ᴍᴀᴅᴇ ʙʏ ᴛᴇᴀᴍʟᴇᴀᴅᴇʀ ᴄʏʙᴇʀᴏʀɢ ᴄᴜʀʀᴇɴᴛʟʏ ɪɴ ᴢɪᴍʙᴀʙᴡᴇ,",
+  "logo": "https://files.catbox.moe/jog59s.jpg",
+  "keywords": ["bot"],
+  "documentation-link": "https://zandile-mk-pair-7a16458b29dc.herokuapp.com/",
+    "owner-verification":"Midkingtech01unbn@gmail.com",
+  
+    "env": {
+      "SESSION_ID": {
+        "description": "Put your SESSION_ID here. It starts with ZANDILE-MK~",
+        "value":"",
+        "required": true
+        
+      },
+      
+    "OWNER_NUMBER": {
+      "description": "Enter owner number",
+      "required": false,
+      "value": "263738403205"
+
+    }  
+  }
+}
