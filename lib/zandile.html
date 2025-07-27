@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZANDILE MK BOT ONLINE ⚡</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://i.postimg.cc/4NdSqms8/MidKing.jpg" type="image/png" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      font-family: 'Share Tech Mono', monospace;
+      color: #00ffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .wrapper {
+      text-align: center;
+      background: rgba(0, 0, 0, 0.65);
+      padding: 40px 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px #00ffff60;
+      width: 90%;
+      max-width: 500px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      box-shadow: 0 0 15px #00ffff;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      color: #00e0ff;
+      text-shadow: 0 0 12px #00ffff;
+      margin: 0 0 10px;
+    }
+
+    .status {
+      font-size: 1rem;
+      margin-bottom: 18px;
+      animation: blink 1.5s infinite alternate;
+    }
+
+    .marquee {
+      overflow: hidden;
+      white-space: nowrap;
+      margin: 18px 0;
+    }
+
+    .marquee span {
+      display: inline-block;
+      animation: scroll 12s linear infinite;
+      font-size: 0.92rem;
+      color: #00e6e6;
+      text-shadow: 0 0 8px #00ffff88;
+    }
+
+    .version-btn, .music-btn {
+      display: inline-block;
+      margin: 10px 6px;
+      padding: 10px 20px;
+      border: 2px solid #00ffff;
+      background: transparent;
+      color: #00ffff;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .version-btn:hover, .music-btn:hover {
+      background: #00ffff;
+      color: #002b36;
+      box-shadow: 0 0 15px #00ffff;
+    }
+
+    footer {
+      margin-top: 25px;
+      font-size: 0.85rem;
+      color: #80e8ff;
+    }
+
+    footer a {
+      color: #80e8ff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fff;
+      text-shadow: 0 0 5px #80e8ff;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    @keyframes blink {
+      from { opacity: 0.6; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔊 Background Music -->
+  <audio id="bg-music" src="https://files.catbox.moe/vpnq7.mp3" loop preload="auto"></audio>
+
+  <div class="wrapper">
+    <!-- 🤖 Bot Logo -->
+    <img src="https://b.top4top.io/p_3291qwfqu0.jpg" alt="Joshuamambo1 Bot Logo" class="logo" />
+
+    <!-- ⚡ Bot Title -->
+    <h1>MALVIN-XD BOT</h1>
+    <div class="status">✅ Bot Connected and Running</div>
+
+    <!-- 🌀 Scrolling Status -->
+    <div class="marquee">
+      <span>⚡ ZANDILE-MK | Reliable | Fast | Always Online | Built for the Future by JMz MIDKING-TECH</span>
+    </div>
+
+    <!-- 🚀 Buttons -->
+    <button class="version-btn" id="version">Checking version...</button>
+    <button class="music-btn" id="toggle-music">🔇 Music Off</button>
+
+    <!-- 📎 Footer -->
+    <footer>
+      Made with ❤️ by <a href="https://github.com/Joshuamambo1" target="_blank">Mr. Joshuamambo1</a> • 2025 ⏤ ♾️ ZANDILE-MK
+    </footer>
+  </div>
+
+  <script>
+    // ✅ Fetch version from GitHub
+    fetch('https://raw.githubusercontent.com/Joshuamambo1/ZANDILE-MK/master/package.json')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('version').textContent = `🚀 Version ${data.version}`;
+      })
+      .catch(() => {
+        document.getElementById('version').textContent = 'Version: Unknown';
+      });
+
+    // 🔊 Music Toggle
+    const music = document.getElementById('bg-music');
+    const toggleBtn = document.getElementById('toggle-music');
+    let playing = false;
+
+    toggleBtn.onclick = () => {
+      if (playing) {
+        music.pause();
+        toggleBtn.textContent = '🔇 Music Off';
+      } else {
+        music.play().then(() => {
+          toggleBtn.textContent = '🔊 Music On';
+        }).catch(() => {
+          alert("🔈 Tap again to allow music autoplay.");
+        });
+      }
+      playing = !playing;
+    };
+  </script>
+</body>
+</html>
